@@ -3,44 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="destination.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=plane_contrails" />
+    <script src="https://kit.fontawesome.com/09d3316df9.js" crossorigin="anonymous"></script>
     <title>Les destinations</title>
 </head>
 <body>
     <nav>
-        <a href="../index.html">Acceuil</a>
-        <a href="../details/details.html">Plus d'infos</a>
-        <a href="../airline/airline.html">Compagnie aérienne</a>
-        <a href="../destination/destination.html">Nos destinations</a>
+        <a href="../index.html" class="acceuil"><img src="../images/favicon.png" alt=""></a>
+        <a href="./airline/airline.html"><span class="material-symbols-outlined" aria-hidden="true">plane_contrails</span><span class="label">Compagnie aérienne</span></a>
+        <a href=""><span class="label">Nos destinations</span></a>
+        <a href="../details/details.html"><i class="fa-solid fa-plane" aria-hidden="true"></i><span class="label">Plus d'infos</span></a>
     </nav>
 
     <h1>Les destinations</h1>
     <div class="carousel">
+        <button class="carousel-btn prev" aria-label="Précédent">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+          </svg>
+        </button>
         <ul>
             <li>
                 <h2>Destination 1</h2>
-                <img src="" alt="">IMAGE
-                <p>DESCRIPTION</p>
-                <p>ACTIVITE</p>
+                <img src="../images/tempImage.png" alt="TEMP">
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ipsum cumque voluptas!</p>
+                <a href="">Choisir</a>
             </li>
             <li>
                 <h2>Destination 2</h2>
-                <img src="" alt="">IMAGE
-                <p>DESCRIPTION</p>
-                <p>ACTIVITE</p>
+                <img src="../images/tempImage.png" alt="TEMP">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quia nemo</p>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+                <a href="">Choisir</a>
             </li>
             <li>
                 <h2>Destination 3</h2>
-                <img src="" alt="">IMAGE
+                <img src="../images/tempImage.png" alt="TEMP">
                 <p>DESCRIPTION</p>
                 <p>ACTIVITE</p>
+                <a href="">Choisir</a>
             </li>
             <li>
                 <h2>Destination 4</h2>
-                <img src="" alt="">IMAGE
+                <img src="../images/tempImage.png" alt="TEMP">
                 <p>DESCRIPTION</p>
                 <p>ACTIVITE</p>
+                <a href="">Choisir</a>
             </li>
         </ul>
+        <button class="carousel-btn next" aria-label="Suivant">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <path d="M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z"></path>
+          </svg>
+        </button>
     </div>
+
+    <footer>
+        <a href="">RAPPORT TXT</a>
+        <a href="">RAPPORT PDF</a>
+        <ul>
+            <li>Axel Raoux</li>
+            <li>Matthéo Ribeiro</li>
+        </ul>
+        <img src="../images/logo-iut.jpg" alt="Logo de l'IUT d'Orsay">
+    </footer>
+
+<script>
+(function () {
+  const container = document.querySelector('.carousel');
+  const ul = container.querySelector('ul');
+  const prev = container.querySelector('.carousel-btn.prev');
+  const next = container.querySelector('.carousel-btn.next');
+
+  function scrollAmount() {
+    const li = ul.querySelector('li');
+    if (!li) return ul.clientWidth;
+    const styles = getComputedStyle(ul);
+    const gap = parseInt(styles.columnGap || styles.gap || 0);
+    return li.getBoundingClientRect().width + gap;
+  }
+
+  prev.addEventListener('click', () => {
+    ul.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+  });
+  next.addEventListener('click', () => {
+    ul.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+  });
+
+  // Accessibilité: flèches clavier
+  container.setAttribute('tabindex', '0');
+  container.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') next.click();
+    if (e.key === 'ArrowLeft') prev.click();
+  });
+})();
+</script>
 </body>
 </html>

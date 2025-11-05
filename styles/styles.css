@@ -8,46 +8,16 @@ body {
     margin: 0;
     font-family: "Helvetica", "Arial", sans-serif;
 }
-/*
-h1 {
-    text-align: center;
-    font-size: 1.7rem;
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
-.carousel {
-    border: 1px black solid;
-}
 
-.carousel ul {
-    width: 35rem;
-    height: 40rem;
-    padding: 20px;
-    display: flex;
-    gap: 4vw;
-    margin: 0 auto;
-}
-
-.carousel li {
-    list-style-type: none;
-    background-color: #eeeeee;
-    border: 1px solid black;
-    flex: 0 0 100%;
-    border-radius: 4rem;
-}
-
-.carousel ul {
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-}
-
-.carousel li {
-    scroll-snap-align: center;
-}
-*/
 /* STYLES NAVBAR FOOTER*/
 
 nav a {
-    text-decoration: none;
     color: white;
     background-color: black;
     padding: 0 1rem;
@@ -55,6 +25,10 @@ nav a {
     align-items: center;
     gap: .5rem;
     display: inline-flex;
+}
+
+nav a:hover span.material-symbols-outlined {
+    text-decoration: none;
 }
 
 a.acceuil img {
@@ -68,8 +42,27 @@ a.acceuil {
     padding: 0;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a:hover { 
+    text-decoration: none; 
+}
+
+nav a:hover .label {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;   /* épaisseur de l’underline */
+    text-underline-offset: 0.2em;    /* espace entre texte et ligne */
+}
+
+nav a:focus { 
+    outline: 2px solid currentColor; 
+    outline-offset: 2px; 
+    text-decoration: none; 
+}
+
+nav a:focus .label {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.18em;
+    text-decoration-skip-ink: auto;
 }
 
 nav {
@@ -90,6 +83,5 @@ footer {
 }
 
 footer a {
-    text-decoration: none;
     color: white;
 }
