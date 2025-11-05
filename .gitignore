@@ -1,0 +1,5 @@
+# Fichiers système
+.DS_Store
+
+# Configurations VS Code
+.vscode/
