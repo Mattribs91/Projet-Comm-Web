@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+/*
+h1 {
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.carousel {
+    border: 1px black solid;
+}
+
+.carousel ul {
+    width: 35rem;
+    height: 40rem;
+    padding: 20px;
+    display: flex;
+    gap: 4vw;
+    margin: 0 auto;
+}
+
+.carousel li {
+    list-style-type: none;
+    background-color: #eeeeee;
+    border: 1px solid black;
+    flex: 0 0 100%;
+    border-radius: 4rem;
+}
+
+.carousel ul {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel li {
+    scroll-snap-align: center;
+}
+*/
+/* STYLES NAVBAR FOOTER*/
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    align-items: center;
+    gap: .5rem;
+    display: inline-flex;
+}
+
+a.acceuil img {
+    height: 3rem;
+    width: auto;
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+a.acceuil {
+    padding: 0;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    padding: 1rem 0;
+    background-color: red;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    gap: 1.5rem;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    /*display: flex;
+    flex-direction: column;*/
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
