@@ -1,40 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+  <head>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <title>Calvas & Co</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav>
-        <a href="" class="acceuil"><img src="./images/favicon.png" alt=""></a>
-        <a href="./details/details.html">Plus d'infos</a>
-        <a href="./airline/airline.html">Compagnie aérienne</a>
-        <a href="./destination/destination.html">Nos destinations</a>
+      <a href="#">
+        <img src="./images/calvisland.png" alt="Logo">
+        Calvas &amp; Co
+      </a>
+      <div>
+        <a href="#" style="color: var(--primary);">Accueil</a>
+        <a href="./travel/travel.html">Voyages</a>
+        <a href="./airline/airline.html">Compagnie Aérienne</a>
+        <a href="./details/details.html">À propos</a>
+      </div>
+      <a href="./reservation/reservation.html">Réserver</a>
     </nav>
 
-    <header>
-        <h1>Calvas & Co</h1>
-    </header>
-
     <main>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt neque nihil, necessitatibus temporibus
-            minus adipisci explicabo perferendis maxime, voluptatibus ex illo accusamus, illum sit modi nemo earum at
-            repudiandae voluptatem?</p>
+      <header>
+        <div>
+          <h1>Calvas &amp; Co</h1>
+          <p>
+            On est là pour mettre fin à votre carrière de lampadaire.
+          </p>
+        </div>
+        <img src="./images/voyages/voyageHeader.png" alt="Image île Calv'Island">
+      </header>
+
+      <div class="profils">
+        <!-- Pack famille -->
+        <article>
+          <img src="./images/voyages/voyageFamille1.png" alt="Photo voyage famille">
+          <div>
+            <h2>Pack Famille</h2>
+            <p>
+              Combinez soin capillaire et vacances grâce aux activités proposées à faire en famille. Rien de mieux pour resouder des liens.
+            </p>
+            <p>
+                <strong>Pour qui ?</strong> Vous et votre famille.<br>
+                <em>Pourquoi ?</em> Calme absolu, clubs enfants et sécurité garantie.
+            </p>
+            <p>1 à 2 Semaines • À partir de 2599€</p>
+            <a href="./travel/travel.html#famille">En savoir plus</a>
+          </div>
+        </article>
+
+        <!-- Chauverie entre potes -->
+        <article>
+          <img src="./images/voyages/voyagePotes1.png" alt="Photo voyage entre amis">
+          <div>
+            <h2>Pack Chauverie Entre Potes</h2>
+            <p>
+              L'ambiance décontractée, profitez de votre repose capillaire avec fun et de manière solidaire !
+            </p>
+            <p>
+                <strong>Pour qui ?</strong> Vous et vos amis.<br>
+                <em>Pourquoi ?</em> Alliez voyage médicale et sortie entre potes.
+            </p>
+            <p>7 Jours • À partir de 1299€</p>
+            <a href="./travel/travel.html#potes">En savoir plus</a>
+          </div>
+        </article>
+
+        <!-- Pack solo -->
+        <article>
+          <img src="./images/voyages/voyageSolo1.png" alt="Photo voyage solo">
+          <div>
+            <h2>Pack Simple</h2>
+            <p>
+              Concentrez vous pleinement sur votre traitement capillaire en étant bien pris en charge.
+            </p>
+            
+            <p>
+                <strong>Pour qui ?</strong> Uniquement vous<br>
+                <em>Pourquoi ?</em> Pas de prises de têtes juste vous et nous.
+            </p>
+            <p>3 à 7 Jours • 2099€</p>
+            
+            <a href="./travel/travel.html#solo">En savoir plus</a>
+          </div>
+        </article>
+
+        <!-- Pack couple -->
+        <article>
+          <img src="./images/voyages/voyageCouple1.png" alt="Photo voyage couple">
+          <div>
+            <h2>Pack Couple</h2>
+            <p>
+              Parfait pour une escapade romantique !
+            </p>
+            
+            <p>
+                <strong>Pour qui ?</strong> Vous et votre conjoint(e)<br>
+                <em>Pourquoi ?</em> Pas de prises de têtes juste vous et nous.
+            </p>
+            <p>7 à 10 Jours • 2999€</p>
+            
+            <a href="./travel/travel.html#couple">En savoir plus</a>
+          </div>
+        </article>
+      </div>
     </main>
 
     <footer>
-        <a href="">RAPPORT TXT</a>
-        <a href="">RAPPORT PDF</a>
-        <ul>
+      <div>
+        <div>
+          <strong>Calvas &amp; Co</strong>
+          <p>Agence de voyages médicaux — calvas&co@bigcalvas.cabrille</p>
+        </div>
+        <div>
+          <a href="./report/report_zip.zip">Rapport Typst</a>
+          <a href="./report/report_pdf.pdf">Rapport PDF</a>
+          <ul>
             <li>Axel Raoux</li>
             <li>Matthéo Ribeiro</li>
-        </ul>
-        <img src="./images/logo-iut.jpg" alt="Logo de l'IUT d'Orsay">
+          </ul>
+        </div>
+        <div>
+          <img src="./images/logo-iut6.png" alt="Logo IUT">
+        </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

@@ -1,87 +1,218 @@
+/* POLICES GOOGLE FONTS */
+@font-face {
+  font-family: 'TitleFont';
+  src: url('../fonts/TitleFont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/BodyFont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---- ANIMATION QUAND ON ARRIVE SUR LA PAGE ---- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Couleurs des pages */
+  --primary: #1e40af; /* Bleu roi */
+  --primary-dark: #1e3a8a; /* Version plus sombre pour les contrastes */
+  --accent: #f59e0b; /* Jaune ambré pour détails */
+  --bg-body: #f0f9ff; /* Fond legerement bleu */
+  --text-main: #334155; /* Gris foncé */
+  --text-light: #64748b; /* Gris clair pour les textes secondaires */
+}
+
+/* ---- POUR POUVOIR METTRE COULEUR SUR SELECTION ---- */
+::selection {
+  background-color: var(--accent);
+  color: white;
 }
 
 body {
-    margin: 0;
-    font-family: "Helvetica", "Arial", sans-serif;
+  font-family: 'Lato', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.6;
+  padding-top: 1rem;
+}
+
+h1, h2, h3 {
+  font-family: 'BodyFont', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--primary-dark);
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+input, button, select, textarea {
+  font-family: inherit;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: var(--primary);
+  transition: color 0.2s;
 }
 
-
-/* STYLES NAVBAR FOOTER*/
-
-nav a {
-    color: white;
-    background-color: black;
-    padding: 0 1rem;
-    border-radius: 1rem;
-    align-items: center;
-    gap: .5rem;
-    display: inline-flex;
+/* Contenu commun des pages */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  animation: fadeIn 0.8s ease-out;
+  padding: 0;
 }
 
-nav a:hover span.material-symbols-outlined {
-    text-decoration: none;
-}
-
-a.acceuil img {
-    height: 3rem;
-    width: auto;
-    border-radius: 1rem;
-    padding: .5rem;
-}
-
-a.acceuil {
-    padding: 0;
-}
-
-nav a:hover { 
-    text-decoration: none; 
-}
-
-nav a:hover .label {
-    text-decoration-line: underline;
-    text-decoration-thickness: 2px;   /* épaisseur de l’underline */
-    text-underline-offset: 0.2em;    /* espace entre texte et ligne */
-}
-
-nav a:focus { 
-    outline: 2px solid currentColor; 
-    outline-offset: 2px; 
-    text-decoration: none; 
-}
-
-nav a:focus .label {
-    text-decoration-line: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.18em;
-    text-decoration-skip-ink: auto;
-}
-
+/* ---- STYLES NAVBAR ---- */
 nav {
-    padding: 1rem 0;
-    background-color: red;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    gap: 1.5rem;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  max-width: 1200px;
+  width: calc(100% - 4rem); /* Assure une marge de 2rem de chaque côté sur petit écran */
+  margin: 0 auto 2rem; /* Centre la barre sur grand écran */
+  padding: 0.8rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e2e8f0;
 }
 
+/* Police spéciale pour calvas and co */
+nav > a:first-child {
+  font-family: 'TitleFont', "Georgia", "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+/* Bouton reserver dernier lien de la navbar */
+nav > a:last-child {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background 0.3s, transform 0.2s;
+}
+
+nav > a:last-child:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* Images réelles (Sélecteurs structurels sans classes) */
+nav > a > img {
+  height: 40px;
+  width: auto;
+}
+
+nav > a > img {
+    border-radius: 8px;
+}
+
+nav > div {
+  display: flex;
+  gap: 2rem;
+}
+
+nav > div a {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+nav > div a:hover {
+  color: var(--accent);
+}
+
+/* ---- STYLES FOOTER ---- */
 footer {
-    color: white;
-    background-color: black;
-    /*display: flex;
-    flex-direction: column;*/
-    text-align: center;
+  background-color: var(--primary-dark);
+  color: #fff;
+  padding: 2.5rem 1.5rem;
+  margin-top: 6rem;
+  border-top: 4px solid var(--accent); /* Border au dessus du footer avec couleur accent */
 }
 
 footer a {
-    color: white;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+/* Logo IUT footer */
+footer div > div:last-child img {
+  height: 80px;
+  width: auto;
+}
+
+footer strong {
+  font-family: 'TitleFont', "Georgia", "Times New Roman", Times, serif;
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+/* ---- RESPONSIVE POUR FOOTER ET NAV ---- */
+@media (max-width: 870px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 16px;
+    margin-top: 0;
+    padding: 1rem;
+  }
+  
+  nav > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  footer > div {
+    flex-direction: column;
+    text-align: center;
+  }
 }

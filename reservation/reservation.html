@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="./reservation.css">
+        <link rel="shortcut icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+        <title>Réservation - Calvas & Co</title>
+</head>
+<body>
+        <nav>
+            <a href="../index.html">
+                <img src="../images/calvisland.png" alt="Logo" class="logo-nav">
+                Calvas &amp; Co
+            </a>
+            <div>
+                <a href="../index.html">Accueil</a>
+                <a href="../travel/travel.html">Voyages</a>
+                <a href="../airline/airline.html">Compagnie Aérienne</a>
+                <a href="../details/details.html">À propos</a>
+            </div>
+            <a href="#">Réserver</a>
+        </nav>
+
+        <main>
+            <h1>Réservez votre séjour</h1>
+            
+            <form action="https://webdev.iut-orsay.fr/r102/tests/formulaire/test_formulaire.php" method="post">
+                <div>
+                    <label for="choix-voyage">Choix du voyage :</label>
+                    <select id="choix-voyage" name="voyage">
+                        <option value="">-- Sélectionnez une destination --</option>
+                        <option value="entre_amis">Pack chauverie entre potes</option>
+                        <option value="en_famille">Pack en famille</option>
+                        <option value="solo">Pack en solo</option>
+                        <option value="en_couple">Pack en couple</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="choix-guide">Choix du guide :</label>
+                    <select id="choix-guide" name="guide">
+                        <option value="">-- Sélectionnez un guide --</option>
+                        <option value="axel">Axel Raoux</option>
+                        <option value="mattheo">Matthéo Ribeiro</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="date-depart">Date de départ souhaitée :</label>
+                    <input type="date" id="date-depart" name="date">
+                </div>
+
+                <div>
+                    <label for="informations">Informations complémentaires :</label>
+                    <textarea id="informations" name="informations" rows="4" placeholder="Cheveux spéciaux, head and shoulders..."></textarea>
+                </div>
+
+                <button type="submit">Envoyer la demande</button>
+            </form>
+
+            <section class="location">
+                <div class="address-info">
+                    <h2>Nous rencontrer</h2>
+                    <p>Venez nous rencontrer dans nos locaux pour discuter de votre projet capillaire autour d'un café.</p>
+                    <address>
+                        <strong>Calvas &amp; Co</strong>
+                        12 Rue des cheveux doux<br>
+                        6767 Calv'City<br>
+                        Calv'Island
+                    </address>
+                </div>
+                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-25.2807,36.7681,-24.8807,37.1681&amp;layer=mapnik&amp;marker=36.968103,-25.080696"></iframe>
+            </section>
+        </main>
+
+        <footer>
+            <div>
+                <div>
+                    <strong>Calvas &amp; Co</strong>
+                    <p>Agence de voyages médicaux — calvas&co@bigcalvas.cabrille</p>
+                </div>
+                <div>
+                    <a href="../report/report_zip.zip">Rapport Typst</a>
+                    <a href="../report/report_pdf.pdf">Rapport PDF</a>
+                    <ul>
+                        <li>Axel Raoux</li>
+                        <li>Matthéo Ribeiro</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="../images/logo-iut6.png" alt="Logo IUT" class="footer-logo">
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

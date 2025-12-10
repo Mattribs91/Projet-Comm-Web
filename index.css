@@ -1,0 +1,129 @@
+/* Header avec les textes et la banière et l'image */
+header {
+  background: linear-gradient(120deg, #3b82f6, var(--primary-dark));
+  color: white;
+  padding: 5rem 2rem;
+  border-radius: 24px;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  height: 350px;
+}
+
+header h1 {
+  color: white;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+header > div {
+  flex: 1;
+  text-align: center;
+}
+
+header img {
+  height: 250px;
+  width: 45%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour la div et les articles qui contiennent les différents packs */
+.profils {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+  padding: 0;
+}
+
+article {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f1f5f9;
+}
+
+article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+article img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+article > div {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: white;
+}
+
+article > div > p:nth-of-type(1) {  /* Styles pour le 1er paragraphe */
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+article > div > p:nth-of-type(2) {  /* Styles pour le 2eme paragraphe */
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+article > div > p:nth-of-type(3) {  /* Styles pour le 3eme paragraphe */
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+}
+
+/* Bouton en bas des cards */
+article a {
+  margin-top: auto;
+  display: block;
+  text-align: center;
+  background-color: white;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+article a:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+}
