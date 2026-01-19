@@ -1,25 +1,25 @@
 # Notes pour la Soutenance Orale - Calvas & Co
 
-## 1. Introduction (Durée : ~1-2 min)
+## 1. Introduction
 *   **Présentation du sujet** :
     *   **Thème** : "Calvas & Co" - Une agence de voyage humoristique ciblant les personnes chauves ou soucieuses de leurs cheveux.
     *   **Slogan** : "On est là pour mettre fin à votre carrière de lampadaire".
     *   **Pourquoi ce choix ?** : Volonté de traiter un sujet original avec humour pour se démarquer, tout en gardant une structure de site e-commerce/voyage classique.
 
-## 2. Déroulement du travail de groupe (Durée : ~2-3 min)
+## 2. Déroulement du travail de groupe
 *   **Répartition des tâches** :
-    *   **Membre 1** : Chargé de l'architecture globale, du design system (CSS), et du développement de la majorité des pages (Accueil, Voyages, Réservation, Airline, structure À propos).
+    *   **Membre 1** : Chargé de l'architecture globale, du design system (CSS), et du développement de la majorité des pages (Accueil, Voyages, Réservation, Airline, À propos).
     *   **Membre 2** : En charge de l'intégration et du contenu d'une partie spécifique de la page "À propos" (sections de contact/détails).
 *   **Outils utilisés** :
     *   VS Code (éditeur de code).
-    *   Partage de fichiers (Drive, Git ?).
+    *   Partage de fichiers (Git).
 *   **Difficultés collectives et solutions** :
     *   **Cohérence du design** : Comment s'assurer que toutes les pages se ressemblent ?
         *   *Solution* : Utilisation d'un fichier CSS commun (`styles/styles.css`) et de variables CSS (pour les couleurs, polices).
     *   **Gestion des liens relatifs** : Difficulté de lier les pages entre elles quand elles sont dans des sous-dossiers (`airline/`, `details/`).
         *   *Solution* : Utilisation de `../` pour remonter dans l'arborescence.
 
-## 3. Présentation technique et Démo (Durée : ~3-4 min)
+## 3. Présentation technique et Démo
 **Attention : Expliquer les termes techniques pour les non-initiés.**
 
 *   **Démonstration du site** : Naviguer entre l'accueil, les voyages et la réservation.
@@ -48,11 +48,3 @@
 *   **Réussite** : Avoir réussi à s'insérer dans l'architecture de code existante.
 *   **Difficulté** : Comprendre le fonctionnement des classes CSS globales créées par le Membre 1 pour les réutiliser sans tout casser.
 *   **Apport personnel** : Apprentissage du travail collaboratif et de l'adaptation à du code écrit par quelqu'un d'autre.
-
-## 5. Rappels pour l'oral
-*   **Pas de téléphone**.
-*   **Ne pas lire ses notes** : Utilisez ce document comme une structure, pas un script.
-*   **Termes à vulgariser** :
-    *   *Responsive* -> "Adaptation du site aux écrans de mobiles et tablettes".
-    *   *Barre de navigation* (pas "Nav bar").
-    *   *Chemin relatif* -> "La façon de dire à l'ordinateur où trouver une image par rapport au fichier actuel".
